@@ -1,0 +1,67 @@
+---
+
+---
+
+<section>
+    <p class="text">
+        “ I’ve been interested in coding for a while but never taken the jump,
+        until now. I couldn’t recommend this course enough. I’m now in the job
+        of my dreams and so excited about the future. ”
+    </p>
+    <footer>
+        <p class="name">Tanya Sinclair</p>
+        <p class="proffetion">UX Engineer</p>
+    </footer>
+</section>
+
+<style>
+    section {
+        text-align: center;
+        padding-block: 2rem;
+        background-image: url('../assets/pattern-quotes.svg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 70px;
+    }
+
+    .text {
+        margin-bottom: 1rem;
+        color: rgba(32, 32, 70, 0.7);
+        z-index: 3;
+    }
+
+    .name {
+        color: var(--blue-clr);
+        font-weight: 700;
+        font-size: 17px;
+    }
+
+    .proffetion {
+        color: var(--dark-gray);
+        font-size: 17px;
+    }
+
+    @media (min-width: 900px) {
+        section {
+            text-align: start;
+        }
+
+        .text {
+            font-size: 24px;
+        }
+
+        footer {
+            display: flex;
+            gap: 0.4rem;
+        }
+    }
+
+    @media (min-width: 1100px) {
+        section {
+            text-align: start;
+            margin-right: -4rem;
+            margin-left: -3rem;
+            padding: 0;
+        }
+    }
+</style>

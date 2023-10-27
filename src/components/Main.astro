@@ -1,0 +1,45 @@
+---
+import ImageSection from './ImageSection.astro';
+import TextSection from './TextSection.astro';
+---
+
+<main>
+    <div class="container">
+        <ImageSection />
+        <TextSection />
+    </div>
+</main>
+
+<style is:global>
+    main {
+        background-image: url('../assets/pattern-curve.svg');
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: 100%;
+    }
+
+    @media (min-width: 900px) {
+        main {
+            background-size: 50%;
+        }
+        main > div {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main > div > section:last-child {
+            position: relative;
+            flex: 1;
+            /* width: 70%; */
+        }
+
+        main > div > section:first-child {
+            position: relative;
+            flex: 1;
+            /* width: 100%; */
+            transform: scale(130%);
+        }
+    }
+</style>
