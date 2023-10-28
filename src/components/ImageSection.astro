@@ -1,31 +1,15 @@
 ---
-import { Image } from 'astro:assets';
-import imgProfile from '../assets/image-tanya.jpg';
+import ButtonImage from './ButtonImage.astro';
 ---
 
 <section>
     <div class="wrap-img">
-        <Image src={imgProfile} alt="woman picture" />
-        <div class="wrap-button">
-            <button class="prev">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="17"
-                    ><path
-                        fill="none"
-                        stroke="#8585AC"
-                        stroke-width="3"
-                        d="M11 1L3 9l8 8"></path></svg
-                >
-            </button>
-            <button class="next">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="17"
-                    ><path
-                        fill="none"
-                        stroke="#8585AC"
-                        stroke-width="3"
-                        d="M2 1l8 8-8 8"></path></svg
-                >
-            </button>
-        </div>
+        <img
+            class="profileImage"
+            src="/images/image-tanya.jpg"
+            alt="woman picture"
+        />
+        <ButtonImage />
     </div>
 </section>
 
@@ -37,6 +21,7 @@ import imgProfile from '../assets/image-tanya.jpg';
         background-size: contain;
         width: 100%;
         padding-block: 3rem;
+        position: relative;
     }
 
     .wrap-img {
@@ -45,43 +30,17 @@ import imgProfile from '../assets/image-tanya.jpg';
         width: 75%;
         margin-inline: auto;
         position: relative;
+        box-shadow: 4px 14px 15px -3px rgba(0, 0, 0, 0.1);
     }
 
-    img {
-        height: 100%;
-    }
-
-    .wrap-button {
-        position: absolute;
-        bottom: -15px;
-        left: 40%;
-        margin-inline: auto;
-        z-index: 10;
-    }
-
-    button {
-        border: none;
-        background-color: white;
-        z-index: 10;
-    }
-
-    .prev {
-        padding: 0.5rem 0.8rem;
-        border-radius: 30px 0 0 30px;
-        z-index: 100;
-    }
-
-    .next {
-        padding: 0.5rem 0.8rem;
-        border-radius: 0 30px 30px 0;
-    }
-
-    @media (min-width: 992px) {
+    @media (min-width: 900px) {
         .wrap-img {
-            height: auto;
+            max-height: 580px;
+            max-width: 650px;
+        }
+
+        img {
             width: 100%;
-            max-width: 400px;
-            max-height: 400px;
         }
     }
 </style>
